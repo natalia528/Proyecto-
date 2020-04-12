@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="DicDat" />
+    <meta name="description" content="BD Colegio_Montessoriano" />
+    <title>Colegio_Montessoriano Diccionario</title>
+    <style type="text/css">
+    table{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    abbr{
+        cursor: help;
+    }
+    table, td, th{
+        border-style: solid;
+        border-width: 1px;
+    }
+    table caption{
+        font-size: 120%;
+        font-weight: bold;
+    }
+    caption{
+        color: black;
+    }
+    td, th{
+        border-color: silver;
+    }
+    tr:hover{
+        color: #333;
+        background-color: #F2F2F2;
+    }
+    th{
+        background-color: silver;
+    }
+    td{
+        color: gray;
+    }
+    ul{
+        font-style: italic;
+    }
+    #title-sect{
+        color: gray;
+        text-align: right;
+    }
+    .proj-desc{
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+<div id="title-sect">
+<h1>BD Colegio_Montessoriano<br> Diccionario de Datos</h1>
+<p>
+<em>2020-03-28</em>
+</p>
+<p class="proj-desc">
+<em></em>
+</p>
+</div>
+<h2>Índice</h2>
+<ul>
+<li><a href='#Administrador'>Administrador</a></li>
+<li><a href='#Coordinador'>Coordinador</a></li>
+<li><a href='#Docente'>Docente</a></li>
+<li><a href='#Estudiante'>Estudiante</a></li>
+<li><a href='#Estudiante_has_Docente'>Estudiante_has_Docente</a></li>
+<li><a href='#Persona'>Persona</a></li>
+<li><a href='#Tipo_Documento'>Tipo_Documento</a></li>
+</ul>
+<table id='Administrador'>
+<caption>Administrador</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>Id_Administrador</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Nombre</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre de la persona encargada de gestionar los horarios de la institución.</td>
+</tr>
+<tr>
+    <td>Apellido</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Apellido de la persona encargada de gestionar los horarios de la institución.</td>
+</tr>
+<tr>
+    <td>Codigo_Administrador</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>El administrador cuenta con un codigo el cual lo identifica en la institución educativa la cual labora, este puede ser de caracter numerico o alfanumerico. </td>
+</tr>
+<table id='Coordinador'>
+<caption>Coordinador</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>Id_Coordinador</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Nombre</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo se basa en la el Nombre del coordinador encargado en el plantel educativo.</td>
+</tr>
+<tr>
+    <td>Apellido</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo se basa en la el Apellido del coordinador encargado en el plantel educativo.</td>
+</tr>
+<tr>
+    <td>Jornada</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo consta principalmente en espicificar la jornada la cual tiene encargada dicho coordinador. </td>
+</tr>
+<tr>
+    <td>Administrador_Id_Administrador</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<table id='Docente'>
+<caption>Docente</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>Id_Docente</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<table id='Estudiante'>
+<caption>Estudiante</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>Id_Estudiante</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Curso</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo el cual describe el curso al que pertenece el estudiante nombrado. </td>
+</tr>
+<table id='Estudiante_has_Docente'>
+<caption>Estudiante_has_Docente</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>Estudiante_Id_Estudiante</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Docente_Id_Docente</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<table id='Persona'>
+<caption>Persona</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>Id_Persona</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Nombre</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Corresponde al nombre de la persona implicada, en este caso se puede denominar si es estudiante o Docente dependiendo la situación. </td>
+</tr>
+<tr>
+    <td>Apellido</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Corresponde al Apellido de la persona implicada, en este caso se puede denominar si es estudiante o Docente dependiendo la situación. </td>
+</tr>
+<tr>
+    <td>Documento</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo se refiere al Numero de documento que identifica a esta persona, ya sea docente o estudiante dependiendo la situación. </td>
+</tr>
+<tr>
+    <td>Hora_Entrada</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo se basa en la hora de ingreso del estudiante o docente, se debe tener en cuenta que este campo es de gran utilidad para gestionar nuestra base de datos.</td>
+</tr>
+<tr>
+    <td>Hora_Salida</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo se basa en la hora de Salida del estudiante o docente, se debe tener en cuenta que este campo es de gran utilidad para gestionar nuestra base de datos.</td>
+</tr>
+<tr>
+    <td>Fecha</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo consta principalmente en el dia el cual sucedieron los hechos (Retraso).</td>
+</tr>
+<tr>
+    <td>Motivo_Retraso</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo referente a la descripción de o justificación por la cual se llego a tener un retraso de los horarios establecidos.</td>
+</tr>
+<tr>
+    <td>Jornada</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Jornada a  la que pertece tanto el estudiante como el docente, dependiendo el caso situado.</td>
+</tr>
+<tr>
+    <td>Docente_Id_Docente</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Estudiante_Id_Estudiante</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Coordinador_Id_Coordinador</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Tipo_Documento_Id_Tipo_Documento</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<table id='Tipo_Documento'>
+<caption>Tipo_Documento</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>Id_Tipo_Documento</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Descripción</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo es indispensable para nuestra base de datos y se refiere a el tipo de documento que va a utilizar dicha persona, por ejemplo: Cedula Ciudadania, Cedula extranjera, Tarjeta de identidad entre otros. </td>
+</tr>
+</table>
+</body>
+</html>
